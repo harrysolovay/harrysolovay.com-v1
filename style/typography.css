@@ -1,0 +1,55 @@
+
+
+/* ==========
+   TYPOGRAPHY
+   ========== */
+
+
+@charset 'utf-8';
+
+@font-face {
+    font-family: 'FuturaLT Heavy';
+    src: url('fonts/FuturaLT_Heavy/futuralt_heavy-webfont.eot');
+    src: url('fonts/FuturaLT_Heavy/futuralt_heavy-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/FuturaLT_Heavy/futuralt_heavy-webfont.woff2') format('woff2'),
+         url('fonts/FuturaLT_Heavy/futuralt_heavy-webfont.woff') format('woff'),
+         url('fonts/FuturaLT_Heavy/futuralt_heavy-webfont.ttf') format('truetype'),
+         url('fonts/FuturaLT_Heavy/futuralt_heavy-webfont.svg#futuramedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FuturaLT Medium';
+    src: url('fonts/FuturaLT_Medium/futuralt_medium-webfont.eot');
+    src: url('fonts/FuturaLT_Medium/futuralt_medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/FuturaLT_Medium/futuralt_medium-webfont.woff2') format('woff2'),
+         url('fonts/FuturaLT_Medium/futuralt_medium-webfont.woff') format('woff'),
+         url('fonts/FuturaLT_Medium/futuralt_medium-webfont.ttf') format('truetype'),
+         url('fonts/FuturaLT_Medium/futuralt_medium-webfont.svg#futura_ltbook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FuturaLT Light';
+    src: url('fonts/FuturaLT_Light/futuralt_light-webfont.eot');
+    src: url('fonts/FuturaLT_Light/futuralt_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/FuturaLT_Light/futuralt_light-webfont.woff2') format('woff2'),
+         url('fonts/FuturaLT_Light/futuralt_light-webfont.woff') format('woff'),
+         url('fonts/FuturaLT_Light/futuralt_light-webfont.ttf') format('truetype'),
+         url('fonts/FuturaLT_Light/futuralt_light-webfont.svg#futura_ltlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+a, span {
+	font-family : 'FuturaLT Heavy';
+	text-transform : uppercase;
+	color : #000000;
+}
+
+p {
+	font-family : 'FuturaLT Light';
+	color : #464646;
+}

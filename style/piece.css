@@ -1,0 +1,16 @@
+#pieces-container {
+	border : 1px solid #E9E9E9;
+	margin : 10px 2.5% 1px 2.5%;
+}
+
+#pieces-container a {
+	font-size : 0px;
+	line-height : 0px;
+}
+
+#pieces-container img {
+	width : 100%;
+	border-bottom : 1px solid #E9E9E9;
+}
+
+#pieces-container a:last-child img { border-bottom : 0px; }

@@ -1,0 +1,73 @@
+form {
+	margin-right : auto;
+	margin-left : auto;
+}
+
+
+	input,
+	textarea {
+		width : inherit;
+		font-family : 'Avenir';
+		font-size : 15px;
+		padding : 8px 12px 8px 12px;
+		border : 1px solid #000000;
+		background-color : #fff;
+	}
+	
+	textarea {
+		height : 146px;
+		resize : none;
+	}
+
+	input[type='submit'] {
+		padding-bottom : 7px;
+		margin-top : 5px;
+		font-family : 'FuturaLT Heavy';
+		text-transform : uppercase;
+	}
+
+
+	input[type='text']:focus,
+	input[type='email']:focus,
+	input[type='tel']:focus,
+	input[type='password']:focus,
+	input[type='search']:focus,
+	textarea:focus {
+		border : 1px solid rgba(0, 128, 255, .75);
+		-webkit-box-shadow : 0px 0px 3px 0px rgba(0, 128, 255, .75);
+		   -moz-box-shadow : 0px 0px 3px 0px rgba(0, 128, 255, .75);
+				box-shadow : 0px 0px 3px 0px rgba(0, 128, 255, .75);
+	}	
+
+	input[type='submit']:hover {
+		color : #2980b9;
+		-webkit-box-shadow : 0px 0px 10px 5px rgba(0, 0, 0, .05);
+		   -moz-box-shadow : 0px 0px 10px 5px rgba(0, 0, 0, .05);
+				box-shadow : 0px 0px 10px 5px rgba(0, 0, 0, .05);
+	}
+
+	input[type='submit']:active {
+		color : #9B9B9B;
+		-webkit-box-shadow : inset 0px 0px 5px 3px rgba(0, 0, 0, .0375);
+		   -moz-box-shadow : inset 0px 0px 5px 3px rgba(0, 0, 0, .0375);
+				box-shadow : inset 0px 0px 5px 3px rgba(0, 0, 0, .0375);
+	}
+	
+/* ====================================
+   SITUATION-SPECIFIC INPUT BOX SHAPING
+   ==================================== */
+
+		#contact input:nth-child(1) { margin-top : 10px; }
+		#contact input:nth-child(2),
+		#contact textarea {
+			margin-top : 8px;
+		}
+		#contact input[type='submit'] {
+			margin-top : 4px;
+			margin-bottom : 6px;
+		}
+
+
+@media screen and (max-width : 480px) { form { width : 90%; } }
+@media screen and (min-width : 481px) and (max-width : 640px) { form { width : 85%; } }
+@media screen and (min-width : 641px) { form { width : 80%; } }
