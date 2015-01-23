@@ -3,15 +3,15 @@
 	$pages = array(
 		array(
 			'href' => 'index.php',
-			'text' => 'About'
+			'text' => 'about'
 		),
 		array(
 			'href' => 'work.php',
-			'text' => 'Work'
+			'text' => 'work'
 		),
 		array(
 			'href' => 'contact.php',
-			'text' => 'Contact'
+			'text' => 'contact'
 		)
 	);
 ?>

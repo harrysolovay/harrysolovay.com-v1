@@ -1,16 +1,16 @@
-<?php require_once('session.php'); ?>
-<?php require_once('validation.php'); ?>
+<?php
+	session_start();
+	require_once('validation.php');
+?>
 <!DOCTYPE html>
 <html lang='en'>
 
 
 	<?php
 	
-		$current_page_name = 'Contact';
+		$current_page_name = 'contact';
 		$current_page_url = 'harrysolovay.com/contact.php';
 		include('components/head.php');
-		
-		track_navigation();
 		
 		$full_name = isset($_SESSION['full_name']) ? $_SESSION['full_name'] : '';
 		$email = isset($_SESSION['email']) ? $_SESSION['email'] : '';
@@ -21,6 +21,9 @@
 			$mailed = true;
 		}
 		
+		if($mailed)
+			$full_name = $email = $inquiry = '';
+		
 	?>
 	
 	
@@ -28,9 +31,6 @@
 	
 	
 		<?php include('components/header.php'); ?>
-		
-		
-		<?php include('components/hero.php'); ?>
 		
 		
 		<?php

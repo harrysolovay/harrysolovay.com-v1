@@ -11,7 +11,7 @@
 	<?php
 		$title = "harrysolovay.com : {$current_page_name}";
 		$description = 'Harry Solovay&#39;s personal website – view his work, resume, contact information &#38; more';
-		$keywords = 'harry, solovay, personal, website, ' . strtolower($current_page_name) . ', page, product, ux, ui, web, designer, developer, programmer, coder, of, internet, and, online, applications, student, artist';
+		$keywords = 'harry, solovay, personal, website, ' . str_replace(' ', ', ', $current_page_name) . ', page, product, ux, ui, web, designer, developer, programmer, coder, of, internet, and, online, applications, student, artist';
 		$creator = 'Harry Solovay';
 		$copyright = $creator . ', ' . date('Y');
 	?>
@@ -48,6 +48,9 @@
 	<meta name='apple-mobile-web-app-capable' content='yes'>
 	<meta name='apple-mobile-web-app-status-bar-style' content='black'>
 	<meta name='apple-mobile-web-app-title' content='<?php echo $title ?>'>
+	
+	<!-- anything per-page -->
+	<?php if(isset($other_meta_data)) echo $other_meta_data; ?>
 
 	<!-- image relational -->
 	<link rel='shortcut icon' href='images/icon/icon.png'>
@@ -67,7 +70,7 @@
 	?>
 
 	<!-- include stylesheets & other relational -->
-    <link rel='stylesheet' href='style/main.css'>
+    <link rel='stylesheet' href='style/style.css'>
     <link rel='author' href='humans.txt'>
 
     <!-- include libraries -->

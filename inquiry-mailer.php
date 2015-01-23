@@ -1,6 +1,10 @@
-<?php require_once('session.php'); ?>
-<?php require_once('validation.php'); ?>
 <?php
+
+	
+	session_start();
+	
+	
+	require_once('validation.php');
 
 	
 	if ($_SERVER['REQUEST_METHOD'] == 'POST') {

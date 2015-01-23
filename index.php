@@ -8,7 +8,7 @@
 	 */
 
 
-?><?php require_once('session.php'); ?>
+?><?php session_start(); ?>
 
 
 <!DOCTYPE html>
@@ -16,10 +16,9 @@
 
 
 	<?php
-		$current_page_name = 'About';
+		$current_page_name = 'about';
 		$current_page_url = 'harrysolovay.com';
 		include('components/head.php');
-		track_navigation();
 	?>
 	
 	
@@ -29,7 +28,9 @@
 		<?php include('components/header.php'); ?>
 		
 		
-		<?php include('components/hero.php'); ?>
+		<section id='hero'>
+			<div class='inner-section cover-with-image'></div>
+		</section>
 		
 		
 		<section id='about'>
