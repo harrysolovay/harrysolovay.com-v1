@@ -2,12 +2,10 @@
 <html lang='en'>
 
 
-	<?php
-	
+	<?php // head configuration :
 		$current_page_name = 'work';
 		$current_page_url = 'harrysolovay.com/work.php';
 		include('components/head.php');
-		
 	?>
 	
 	
@@ -17,48 +15,48 @@
 		<?php include('components/header.php'); ?>
 		
 		
+		<!-- work data -->
 		<?php include('work-data.php'); ?>
 		
 		
-		<div></div>
+		<!-- margin divs -->
+		<div></div><div></div>
 		
 		
 		<?php
 		
-		
-			$index = 0;
-		
-		
-			function new_grid_section($o) {
+			$index = 0; // keep track of which piece to link to
 			
-				echo "<section class='work' id='{$o['id']}'>
+			// for each work type
+			foreach($work as $o) {
+			
+				// create a new section with title & grid
+				echo "<!-- " . strtolower($o['type']) . " section -->
+				<section class='work' id='{$o['id']}'>
 					<div class='inner-section'>
 						<span>{$o['type']}</span>
 						<div class='grid clearfix'>";
 				
-				global $index;
-				
+				// for each piece within the new section
 				foreach($o['pieces'] as $piece) {
-					echo "<a href='piece.php?index=" . (string)$index . "'>";
-						echo "<div class='grid-item cover-with-image disable-selection' style='background-image : url(images/work/{$o['sub_url']}{$piece['sub_url']}thumbnail.jpg)'>
-								<span>{$piece['name']}</span>
-							</div>";
-					echo "</a>";
+				
+					// create a new grid-item with $index in the GET
+					echo "<a href='piece.php?index=" . (string)$index . "'>
+						<div class='grid-item cover-with-image disable-selection' style='background-image : url(images/work/{$o['sub_url']}{$piece['sub_url']}thumbnail.jpg)'>
+							<span>{$piece['name']}</span>
+						</div>
+					</a>";
+					
+					// increment index
 					$index++;
+					
 				}
 				
+				// create closing tags of the new section
 				echo "</div></div></section>";
 				
 			}
 			
-		
-		?>
-		
-		
-		<?php
-			for($i = 0; $i < count($work); $i++) {
-				new_grid_section($work[$i]);
-			}
 		?>
 	
 	

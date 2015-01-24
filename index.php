@@ -1,21 +1,17 @@
-<?php
+<!--
 
-
-	/**
-	 * @package		harrysolovay.com
-	 * @author		Harry Solovay <harrysolovay.com || harrysolovay@gmail.com>
-	 * @copyright	Copyright (c) 2014, Harry Solovay All Rights Reserved
-	 */
-
-
-?><?php session_start(); ?>
-
-
+/**
+ * @package		harrysolovay.com
+ * @author		Harry Solovay <harrysolovay.com || harrysolovay@gmail.com>
+ * @copyright	Copyright (c) 2014, Harry Solovay All Rights Reserved
+ */
+	 
+-->
 <!DOCTYPE html>
 <html lang='en'>
 
 
-	<?php
+	<?php // head configuration :
 		$current_page_name = 'about';
 		$current_page_url = 'harrysolovay.com';
 		include('components/head.php');
@@ -28,11 +24,13 @@
 		<?php include('components/header.php'); ?>
 		
 		
+		<!-- hero section -->
 		<section id='hero'>
 			<div class='inner-section cover-with-image'></div>
 		</section>
 		
 		
+		<!-- about section -->
 		<section id='about'>
 			<hr>
 			<div class='inner-section text-section-padding'>
@@ -41,6 +39,7 @@
 		</section>
 		
 		
+		<!-- experience section -->
 		<section id='experience'>
 			<hr>
 			<div class='inner-section text-section-padding'>
@@ -50,6 +49,7 @@
 		</section>
 		
 		
+		<!-- future section -->
 		<section id='future'>
 			<hr>
 			<div class='inner-section text-section-padding'>
@@ -59,6 +59,7 @@
 		</section>
 		
 		
+		<!-- tmi section -->
 		<section id='tmi'>
 			<hr>
 			<div class='inner-section text-section-padding'>
@@ -71,33 +72,18 @@
 		<?php include('components/footer.php'); ?>
 		
 		
-		<script type='text/javascript'>
+		<!--<script type='text/javascript'>
 			
-			$('header a').click(function(e) {
-				e.preventDefault();
-				window.redirectTo = $(this).attr('href');
-				if($(window).scrollTop() > 1) {
-					$('html, body').animate({
-						scrollTop : 0
-					}, 750, function() {
-						window.location.href = redirectTo;
-					});
-				} else {
-					window.location.href = redirectTo;
-				}
-			});
+			/* if on mobile device, define parallax() to return false
+			   if not on a mobile device, define actual parallax effect */
 			
-			window.isMobile = (function() {
-				if (navigator.userAgent.match(/Android/i)
- 					|| navigator.userAgent.match(/webOS/i)
- 					|| navigator.userAgent.match(/iPhone/i)
- 					|| navigator.userAgent.match(/iPad/i)
- 					|| navigator.userAgent.match(/iPod/i)
- 					|| navigator.userAgent.match(/BlackBerry/i)
- 					|| navigator.userAgent.match(/Windows Phone/i))
- 					return true;
- 				return false;
-			})();
+			window.isMobile = navigator.userAgent.match(/Android/i)
+ 				|| navigator.userAgent.match(/webOS/i)
+ 				|| navigator.userAgent.match(/iPhone/i)
+ 				|| navigator.userAgent.match(/iPad/i)
+ 				|| navigator.userAgent.match(/iPod/i)
+ 				|| navigator.userAgent.match(/BlackBerry/i)
+ 				|| navigator.userAgent.match(/Windows Phone/i);
 			
 			if(isMobile) {
 				window.parallax = function() {
@@ -115,7 +101,7 @@
 				parallax();
 			});
 			
-		</script>
+		</script>-->
 		
 		
 	</body>

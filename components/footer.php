@@ -1,12 +1,6 @@
-
-
-
-
-
 <!-- footer link data -->
 <?php
 	$my_google_plus_url = 'https://plus.google.com/+HarrySolovay/posts';
-	// make facebook publicly accessible
 	$my_facebook_url = 'https://facebook.com/harry.solovay';
 	$my_linkedin_url = 'https://www.linkedin.com/in/harrysolovay';
 	$my_github_url = 'https://github.com/harrysolovay';

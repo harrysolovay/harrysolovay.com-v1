@@ -6,23 +6,29 @@
 <html lang='en'>
 
 
-	<?php
+	<?php // head configuration & field value handling:
 	
 		$current_page_name = 'contact';
 		$current_page_url = 'harrysolovay.com/contact.php';
 		include('components/head.php');
 		
+		// if is set, store inquiry-mailer data – otherwise set it to an empty string
 		$full_name = isset($_SESSION['full_name']) ? $_SESSION['full_name'] : '';
 		$email = isset($_SESSION['email']) ? $_SESSION['email'] : '';
 		$inquiry = isset($_SESSION['inquiry']) ? $_SESSION['inquiry'] : '';
+		
+		// reset inquiry mailer session data
+		$_SESSION['full_name'] = $_SESSION['email'] = $_SESSION['inquiry'] = '';
+		
+		// define $mailed
 		$mailed = false;
 		
+		// check & store if mailed
 		if(!empty($full_name) && !empty($email) && !empty($inquiry)) {
 			$mailed = true;
-		}
-		
-		if($mailed)
+			// if mailed, reset form field values
 			$full_name = $email = $inquiry = '';
+		}
 		
 	?>
 	
@@ -33,20 +39,26 @@
 		<?php include('components/header.php'); ?>
 		
 		
+		<!-- margin divs -->
+		<div></div><div></div>
+		
+		
 		<?php
 			if($mailed) {
-				echo "<div></div><section class='section'>
+				echo "<!-- message sent success message -->
+				<section>
 					<span class='block'>Your message was successfully sent!</span>
 					<hr>
 				</section>
-				<div></div>
+				<!-- divs maintain section/color rotation -->
+				<div></div><div></div>
 				<script type='text/javascript'>
 					$(function() {
 						$('.block').css({
-							'-webkit-transition-duration' : '1.25s',
-   	   						'-moz-transition-duration' : '1.25s',
-  		 					'-o-transition-duration' : '1.25s',
-    	    				'transition-duration' : '1.25s',
+							'-webkit-transition-duration' : '1.75s',
+   	   						'-moz-transition-duration' : '1.75s',
+  		 					'-o-transition-duration' : '1.75s',
+    	    				'transition-duration' : '1.75s',
 							'color' : '#22A7F0'
 						});
 					});
@@ -55,6 +67,7 @@
 		?>
 		
 		
+		<!-- contact section -->
 		<section id='contact'>
 			<div class='inner-section'>
 				<span>Reach out to me<br>with any questions,<br>comments or... etc.</span>
@@ -68,11 +81,7 @@
 		</section>
 		
 		
-		<?php
-			print_then_clear_all_validation_messages();
-			if($mailed)
-				$_SESSION['full_name'] = $_SESSION['email'] = $_SESSION['inquiry'] = '';
-		?>
+		<?php print_then_clear_all_validation_messages(); ?>
 	
 	
 		<?php include('components/footer.php'); ?>

@@ -61,6 +61,24 @@ $(function() {
 
 
 
+$('header a').click(function(e) {
+	e.preventDefault();
+	window.redirectTo = $(this).attr('href');
+	if($(window).scrollTop() > 1) {
+		$('html, body').animate({
+			scrollTop : 0
+		}, 750, function() {
+			window.location.href = redirectTo;
+		});
+	} else {
+		window.location.href = redirectTo;
+	}
+});
+
+
+
+
+
 $(window).resize(function() {
 	detailing();
 });

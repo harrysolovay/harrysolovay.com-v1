@@ -1,23 +1,4 @@
 
-/*	=================
-	TABLE OF CONTENTS
-	=================
-	
-	1) Reset
-	2) Section
-	3) Sectioning
-	4) Header
-	5) Forms & Input
-	6) Pre-footer
-	7) Footer
-	
-	=================	*/
-
-
-
-
-
-
 
 
 
@@ -610,6 +591,8 @@ header {
 #projects, #drawings { border-bottom : 1px solid #E9E9E9 !important; }
 
 		.grid {
+			margin-right : 2.5%;
+			margin-left : 2.5%;
 			padding-top : 10px;
 			padding-bottom : 6px;
 		}
@@ -678,21 +661,27 @@ header {
 	}
 
 		#last-piece, #all, #next-piece {
-			padding-top : 19px;
-			padding-bottom : 19px;
+			width : 33.333%;
+			padding-top : 17px;
+			padding-bottom : 16px;
+			-webkit-transition : color .375s, box-shadow .125s;
+ 		  	   -moz-transition : color .375s, box-shadow .125s;
+ 		 		 -o-transition : color .375s, box-shadow .125s;
+ 			   	    transition : color .375s, box-shadow .125s;
 		}
-
-		#last-piece {
-			z-index : 200;
-			padding-left : 2.5%;
+		
+		#last-piece:active, #all:active, #next-piece:active {
+			-webkit-box-shadow : inset 0px 0px 5px 3px rgba(0, 0, 0, .05);
+			   -moz-box-shadow : inset 0px 0px 5px 3px rgba(0, 0, 0, .05);
+					box-shadow : inset 0px 0px 5px 3px rgba(0, 0, 0, .05);
+		}
+		
+		#last-piece, #next-piece {
+			border-right : 1px solid #E9E9E9;
+			border-left : 1px solid #E9E9E9;
 		}
 
 		#all { display : inline-block; }
-
-		#next-piece {
-			z-index : 200;
-			padding-right : 2.5%;
-		}
 
 		#pieces-container {
 			border : 1px solid #E9E9E9;

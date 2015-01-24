@@ -1,4 +1,3 @@
-
 <?php
 	$pages = array(
 		array(
@@ -16,7 +15,7 @@
 	);
 ?>
 
-<!-- HEADER -->
+<!-- header -->
 <header class='fix-at-top'>
 	<div class='inner-section clearfix'>
 		<div class='float-left'>

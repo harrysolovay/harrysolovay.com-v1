@@ -1,20 +1,27 @@
 <?php include('work-data.php'); ?>
 <?php
 	
-	function redirect_to_all_work() {
+	// store how many pieces of work inside $how_many_pieces
+	$how_many_pieces = 0;
+	foreach($work as $type) {
+		for($i = 0; $i < count($type['pieces']); $i++) {
+			$how_many_pieces++;
+		}
+	}
+	
+	function redirect_to_all() {
 		header('Location: work.php');
 		exit();
 	}
 	
-	$current_piece_index = (isset($_GET['index']) && $_GET['index'] >= 0) ? $_GET['index'] : null;
-	
-	if(!isset($current_piece_index)) {
-		redirect_to_all_work();
-	}
+	// if is set & within existing boundaries, store $_GET['index'] inside of $current_piece_index
+	$current_piece_index = (isset($_GET['index']) && $_GET['index'] >= 0 && $_GET['index'] < $how_many_pieces) ? $_GET['index'] : redirect_to_all();
 	
 	$current_piece = null;
-	$total = 0;
-	$broken_apart = 0;
+	$total = 0; // represents number of ['piece'] properties iterated on
+	$broken_apart = 0; // represents index of current property within the current ['piece']
+	
+	// sets $current_piece to the correct piece
 	foreach($work as $type) {
 		for($i = 0; $i < count($type['pieces']); $i++) {
 			if($current_piece_index == $total) {
@@ -27,20 +34,18 @@
 		$broken_apart = 0;
 	}
 	
+	// stores the piece's name, url & whether or not it has multiple pages;
 	$current_piece_name = $current_piece['name'];
 	$current_piece_url = 'images/work/' . $type['sub_url'] . $current_piece['sub_url'];
-	$current_piece_has_multiple = isset($current_piece['has_multiple']) ? true : false;
-	
-	if($current_piece_url == 'images/work/') {
-		redirect_to_all_work();
-	}
+	$current_piece_date = isset($current_piece['date']) ? $current_piece['date'] : null;
+	$current_piece_has_multiple = isset($current_piece['has_multiple']);
 
 ?>
 <!DOCTYPE html>
 <html lang='en'>
 
 
-	<?php
+	<?php // head configuration :
 		$current_page_name = 'work';
 		$current_page_url = 'harrysolovay.com/piece.php?index=' . $current_piece_index;
 		include('components/head.php');
@@ -53,17 +58,13 @@
 		<?php include('components/header.php'); ?>
 		
 		
-		<div></div>
+		<!-- margin divs -->
+		<div></div><div></div>
 		
 		
 		<?php
-		
-			$how_many_pieces = 0;
-			foreach($work as $type) {
-				for($i = 0; $i < count($type['pieces']); $i++) {
-					$how_many_pieces++;
-				}
-			}
+			
+			// store hrefs to next & previous pieces in PHP & JavaScript
 			
 			$last_piece_href = 'piece.php?index=' . (($current_piece_index-1 < 0) ? $how_many_pieces-1 : $current_piece_index-1);
 			$next_piece_href = 'piece.php?index=' . (($current_piece_index+1 >= $how_many_pieces) ? 0 : $current_piece_index+1);
@@ -76,6 +77,7 @@
 		?>
 		
 		
+		<!-- piece navigation -->
 		<section id='piece-navigation'>
 			<div class='inner-section clearfix'>
 				<a id='last-piece' class='float-left' href='<?php echo $last_piece_href; ?>'>last</a>
@@ -86,9 +88,15 @@
 		</section>
 		
 		
+		<!-- piece section -->
 		<section id='piece'>
 			<div class='inner-section'>
-				<span><?php echo $current_piece_name; ?></span>
+				<span>
+					<?php
+						echo $current_piece_name;
+						if(isset($current_piece_date)) echo ' (' . $current_piece_date . ')';
+					?>
+				</span>
 				<div id='pieces-container'>
 					<?php
 					
@@ -117,8 +125,10 @@
 	
 		<?php include('components/footer.php'); ?>
 		
+		
 		<script type='text/javascript'>
 			
+			// redirect to next or previous pieces with right & left arrow keys
 			$(document).keydown(function(e) {
 				if(e.which == 37) {
 					window.location.href = lastPieceHRef;
