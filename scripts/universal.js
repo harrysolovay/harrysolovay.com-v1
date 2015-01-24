@@ -38,22 +38,18 @@ $(function() {
 	applyInnerTextShadow({
 
 		'.inner-section > span' : {
-			'background-color' : '#565656',
+			'background-color' : '#2B2B2B',
 			'text-shadow' : '0px 2px 3px rgba(255, 255, 255, 0.5)'
 		},
 
 	    '.inner-section > p' : {
-	    	'background-color' : '#565656',
+	    	'background-color' : '#2B2B2B',
 	    	'text-shadow' : '0px 1px 1px rgba(255, 255, 255, 0.5)'
 	    }
 
 	});
 
 	detailing();
-
-	$('.inner-section').animate({
-		opacity : 1
-	}, 750);
 
 });
 

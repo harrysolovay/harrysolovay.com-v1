@@ -71,7 +71,7 @@
     <!-- include libraries -->
 	<script type='text/javascript' src='http://code.jquery.com/jquery-latest.min.js'></script>
     <script type='text/javascript'>window.jQuery || document.write("<script type='text/javascript' src='scripts/jquery-2.1.3.min.js'><\/script>");</script>
-    <script type='text/javascript' src='scripts/modernizr.js'></script><!-- replace with minified custom build -->
+    <script type='text/javascript' src='scripts/modernizr.min.js'></script><!-- replace with minified custom build -->
     <script type='text/javascript' src='scripts/inner-text-shadow.js'></script>
 
 

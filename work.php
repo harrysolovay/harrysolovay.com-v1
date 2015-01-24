@@ -15,7 +15,6 @@
 		<?php include('components/header.php'); ?>
 		
 		
-		<!-- work data -->
 		<?php include('work-data.php'); ?>
 		
 		
@@ -25,7 +24,8 @@
 		
 		<?php
 		
-			$index = 0; // keep track of which piece to link to
+			$current_type_index = 0;
+			$current_piece_index = 0; // keep track of which piece to link to
 			
 			// for each work type
 			foreach($work as $o) {
@@ -41,19 +41,22 @@
 				foreach($o['pieces'] as $piece) {
 				
 					// create a new grid-item with $index in the GET
-					echo "<a href='piece.php?index=" . (string)$index . "'>
+					echo "<a href='piece.php?index=" . (string)$current_piece_index . "'>
 						<div class='grid-item cover-with-image disable-selection' style='background-image : url(images/work/{$o['sub_url']}{$piece['sub_url']}thumbnail.jpg)'>
 							<span>{$piece['name']}</span>
 						</div>
 					</a>";
 					
-					// increment index
-					$index++;
+					$current_piece_index++;
 					
 				}
 				
 				// create closing tags of the new section
-				echo "</div></div></section>";
+				echo '</div></div>';
+				if($current_type_index < count($work) - 1) echo '<hr>';
+				echo '</section>';
+				
+				$current_type_index++;
 				
 			}
 			
