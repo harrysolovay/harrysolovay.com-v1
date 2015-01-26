@@ -1,5 +1,6 @@
-<?php include('work-data.php'); ?>
 <?php
+	
+	require('work-data.php');
 	
 	// store how many pieces of work inside $how_many_pieces
 	$how_many_pieces = 0;
@@ -56,10 +57,6 @@
 	
 	
 		<?php include('components/header.php'); ?>
-		
-		
-		<!-- margin divs -->
-		<div></div><div></div>
 		
 		
 		<?php

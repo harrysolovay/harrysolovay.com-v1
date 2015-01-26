@@ -73,7 +73,7 @@
 					'name' => 'The Structure'
 				)
 			)
-		),
+		)/*,
 	
 	
 		array(
@@ -130,7 +130,7 @@
 					'name' => 'Ivy Building'
 				)
 			)
-		)
+		)*/
 		
 		
 	);

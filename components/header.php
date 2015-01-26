@@ -43,3 +43,6 @@
 		</div>
 	</div>
 </header>
+
+<!-- margin divs -->
+<div></div><div></div>

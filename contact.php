@@ -1,7 +1,4 @@
-<?php
-	session_start();
-	require_once('validation.php');
-?>
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang='en'>
 
@@ -12,23 +9,18 @@
 		$current_page_url = 'harrysolovay.com/contact.php';
 		include('components/head.php');
 		
-		// if is set, store inquiry-mailer data – otherwise set it to an empty string
+		// if is set, store inquiry-mailer data – otherwise set it to an empty string / false
 		$full_name = isset($_SESSION['full_name']) ? $_SESSION['full_name'] : '';
 		$email = isset($_SESSION['email']) ? $_SESSION['email'] : '';
 		$inquiry = isset($_SESSION['inquiry']) ? $_SESSION['inquiry'] : '';
+		$mailed = isset($_SESSION['mailed']) ? $_SESSION['mailed'] : false;
 		
 		// reset inquiry mailer session data
 		$_SESSION['full_name'] = $_SESSION['email'] = $_SESSION['inquiry'] = '';
+		$_SESSION['mailed'] = false;
 		
-		// define $mailed
-		$mailed = false;
-		
-		// check & store if mailed
-		if(!empty($full_name) && !empty($email) && !empty($inquiry)) {
-			$mailed = true;
-			// if mailed, reset form field values
-			$full_name = $email = $inquiry = '';
-		}
+		// reset fields if mailed
+		if($mailed) $full_name = $email = $inquiry = '';
 		
 	?>
 	
@@ -37,10 +29,6 @@
 	
 	
 		<?php include('components/header.php'); ?>
-		
-		
-		<!-- margin divs -->
-		<div></div><div></div>
 		
 		
 		<?php
@@ -81,7 +69,10 @@
 		</section>
 		
 		
-		<?php print_then_clear_all_validation_messages(); ?>
+		<?php // display & reset validation messages:
+			require('validation.php');
+			print_then_clear_all_validation_messages();
+		?>
 	
 	
 		<?php include('components/footer.php'); ?>

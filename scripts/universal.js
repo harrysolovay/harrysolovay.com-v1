@@ -23,10 +23,6 @@ function detailing() {
     } else if($(window).width() <= 601) {
     	$('header + *').css('margin-top', '83px');
     }
-    $('#item-viewer').css({
-    	'top' : $('header').outerHeight(),
-    	'height' : $(window).height() - $('header').height()
-    });
 }
 
 

@@ -86,19 +86,33 @@
  				|| navigator.userAgent.match(/Windows Phone/i);
 			
 			if(isMobile) {
-				window.parallax = function() {
+			
+				window.scrollEffect() = function() {
 					return false;
 				}
+				
 			} else {
-				window.parallax = function() {
+			
+				window.scrollEffect = function() {
+				
+					// fade-away:
+					/*
+					$('#hero').css('opacity', 1 - ($(window).scrollTop() / $('#hero').outerHeight()));
+					*/
+				
+					// parallax:
+					/*
 					$('#hero div').offset({
 						top : $(window).scrollTop() * .25 + $('header').outerHeight()
 					});
+					*/
+					
 				}
+				
 			}
 			
 			$(window).scroll(function() {
-				parallax();
+				scrollEffect();
 			});
 			
 		</script>-->
@@ -111,7 +125,5 @@
 
 
 <!------------------------------------------------------
-	And every element lived happily ever after. THE END!
+	And every element lived happily ever after. the end!
     ------------------------------------------------------>
-
-

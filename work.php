@@ -10,16 +10,12 @@
 	
 	
 	<body>
-	
-	
+		
+		
+		<?php require('work-data.php'); ?>
+		
+		
 		<?php include('components/header.php'); ?>
-		
-		
-		<?php include('work-data.php'); ?>
-		
-		
-		<!-- margin divs -->
-		<div></div><div></div>
 		
 		
 		<?php
