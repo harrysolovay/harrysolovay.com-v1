@@ -1,13 +1,13 @@
 <?php
 	
 	
-	$work = array(
+	return array(
 	
 	
 		array(
 			'id' => 'projects',
 			'type' => 'Projects',
-			'sub_url' => 'projects/',
+			'sub_url' => 'work/projects/',
 			'pieces' => array(
 				array(
 					'sub_url' => 'cube-solve-art/',
@@ -26,6 +26,10 @@
 				array(
 					'sub_url' => 'shells/',
 					'name' => 'Shells'
+				),
+				array(
+					'sub_url' => 'kogeto-player/',
+					'name' => 'Kogeto Player'
 				)
 			)
 		),
@@ -34,7 +38,7 @@
 		array(
 			'id' => 'drawings',
 			'type' => 'Drawings',
-			'sub_url' => 'drawings/',
+			'sub_url' => 'work/drawings/',
 			'pieces' => array(
 				array(
 					'sub_url' => 'crosshatched-iphone/',
@@ -73,64 +77,7 @@
 					'name' => 'The Structure'
 				)
 			)
-		)/*,
-	
-	
-		array(
-			'id' => 'photography',
-			'type' => 'Photography',
-			'sub_url' => 'photography/',
-			'pieces' => array(
-				array(
-					'sub_url' => '1/',
-					'name' => 'My Desk'
-				),
-				array(
-					'sub_url' => '2/',
-					'name' => 'Sagrada Familia'
-				),
-				array(
-					'sub_url' => '3/',
-					'name' => 'Peeeeps!'
-				),
-				array(
-					'sub_url' => '4/',
-					'name' => 'Pug Life'
-				),
-				array(
-					'sub_url' => '5/',
-					'name' => 'Google Lego Room'
-				),
-				array(
-					'sub_url' => '6/',
-					'name' => 'Florida Sunset'
-				),
-				array(
-					'sub_url' => '7/',
-					'name' => 'Foggy Reservoir'
-				),
-				array(
-					'sub_url' => '8/',
-					'name' => 'West Side Landscape'
-				),
-				array(
-					'sub_url' => '9/',
-					'name' => 'West Side Landscape'
-				),
-				array(
-					'sub_url' => '10/',
-					'name' => 'The Guggenheim'
-				),
-				array(
-					'sub_url' => '11/',
-					'name' => 'Golden Earpods'
-				),
-				array(
-					'sub_url' => '12/',
-					'name' => 'Ivy Building'
-				)
-			)
-		)*/
+		)
 		
 		
 	);

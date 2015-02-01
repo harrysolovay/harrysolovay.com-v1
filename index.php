@@ -44,29 +44,29 @@
 			<hr>
 			<div class='inner-section text-section-padding'>
 				<span>Experience</span>
-				<p class='indent'>I have over four years of experience coding for the web. I can create almost anything with HTML, CSS and JavaScript. My code is well-organized, clean, efficient and takes advantage of the absolute best development practices today. In terms of my work history, my first technology-related job was working as a tutor; I taught other high school students programming basics. The summer before my Senior year of high school I worked for a tech startup in SoHo (Kogeto) where I designed and coded a 360 degree video player. In my senior year of high school I had an independent study in interface design and the future of computing, and took Advanced Topics in Programming. In my first semester of college, I had an independent study in App Development. During the current semester (Spring of 2015), I am working on an independent research project on Social Media. I also continue to freelance web design and work on personal projects. There&#x2019;s more to come.</p>
+				<p class='indent'>I have over four years of experience coding for the web. I can create almost anything with HTML, CSS and JavaScript. My code is well-organized, clean, efficient and takes advantage of the absolute best development practices today. In terms of my work history, my first technology-related job was working as a tutor; I taught other high school students programming basics. The summer before my Senior year of high school I worked for a tech startup in SoHo (Kogeto) where I designed and coded a 360 degree video player. In my senior year of high school I had an independent study in interface design and the future of computing, and took Advanced Topics in Programming. In my first semester of college, I had an independent study in App Development. During the current semester (Spring of 2015), I am working on an independent research project on social media and data collection. I also continue to freelance web design and work on personal projects. There&#x2019;s more to come.</p>
 			</div>
 		</section>
 		
 		
 		<!-- future section -->
-		<section id='future'>
+		<!--<section id='future'>
 			<hr>
 			<div class='inner-section text-section-padding'>
 				<span>Future</span>
 				<p class='indent'>I keep a running list of product and app ideas, all of which I hope to one day bring to life. I prioritize these projects pretty carefully and work on them in my free time during school. There are a couple hopes that I have for how my interests will play out over time &#x2013; all of which eventually lead me to a place where I can express all of my ideas. While I like the idea of achieving financial success, I am even more motivated by the idea of effective self-expression and innovation. In my life, I will do everything I can to be a positive part of our society&#x27;s design and technologic momentum.</p>
 			</div>
-		</section>
+		</section>-->
 		
 		
 		<!-- tmi section -->
-		<section id='tmi'>
+		<!--<section id='tmi'>
 			<hr>
 			<div class='inner-section text-section-padding'>
 				<span>TMI</span>
-				<p class='indent'>I love to toss a Frisbee outside (even if it&#x2019;s winter and freezing cold). I play drums almost every day. I listen to extremely loud music and create abstract art &#x2013; I&#x27;m a big fan of surrealism (Magritte is my favorite painter). I love taking my dog Lola for walks in Central Park &#x2013; I let her off-leash and toss a tennis ball for her to chase (she rarely brings the ball back to me but she&#x2019;s cute enough to get away with it). I watch every Apple keynote over live stream. I enjoy comedy improv shows and like to take classes at the Upright Citizens Brigade. I love having simple stay-in nights with Domino&#x27;s pizza and Will Farrell movies. My favorite television shows include: Entourage, How I Met Your Mother and Shark Tank. I&#x2019;m a classic rock kind of guy but love certain rap artists (not to brag, but I was a Kendrick Lamar fan way before he became big). For most Halloween weekends, I go at least one night as Hugh Hefner &#x2013; it&#x2019;s a great excuse to walk around in a bathrobe with a cigar. I once met Jony Ive and was so star-struck that I just said &#x201C;I love everything you&#x2019;ve ever done... ever.&#x201D;</p>
+				<p class='indent'>I love to toss a Frisbee outside (even if it&#x2019;s winter and freezing cold). I play drums almost every day. I listen to extremely loud music and create abstract art &#x2013; I&#x27;m a big fan of surrealism (Magritte is my favorite painter). I love taking my dog Lola for walks in Central Park. I watch every Apple keynote over live stream. I enjoy comedy improv shows and like to take classes at the Upright Citizens Brigade. I love having simple stay-in nights with Domino&#x27;s pizza and Will Farrell movies. My favorite television shows include Entourage and Shark Tank. I listen mostly to classic rock but love certain rap artists (not to brag, but I was a Kendrick Lamar fan way before he became big). For most Halloween weekends, I go at least one night as Hugh Hefner &#x2013; it&#x2019;s a great excuse to walk around in a bathrobe with a cigar. I once met Jony Ive and was so star-struck that I just said &#x201C;I love everything you&#x2019;ve ever done... ever.&#x201D;</p>
 			</div>
-		</section>
+		</section>-->
 	
 	
 		<?php include('components/footer.php'); ?>

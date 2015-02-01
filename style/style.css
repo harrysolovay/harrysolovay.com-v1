@@ -14,36 +14,24 @@
 
 @font-face {
     font-family: 'FuturaLT Heavy';
-    src: url('fonts/FuturaLT_Heavy/futuralt_heavy-webfont.eot');
-    src: url('fonts/FuturaLT_Heavy/futuralt_heavy-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/FuturaLT_Heavy/futuralt_heavy-webfont.woff2') format('woff2'),
-         url('fonts/FuturaLT_Heavy/futuralt_heavy-webfont.woff') format('woff'),
-         url('fonts/FuturaLT_Heavy/futuralt_heavy-webfont.ttf') format('truetype'),
-         url('fonts/FuturaLT_Heavy/futuralt_heavy-webfont.svg#futuramedium') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'FuturaLT Medium';
-    src: url('fonts/FuturaLT_Medium/futuralt_medium-webfont.eot');
-    src: url('fonts/FuturaLT_Medium/futuralt_medium-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/FuturaLT_Medium/futuralt_medium-webfont.woff2') format('woff2'),
-         url('fonts/FuturaLT_Medium/futuralt_medium-webfont.woff') format('woff'),
-         url('fonts/FuturaLT_Medium/futuralt_medium-webfont.ttf') format('truetype'),
-         url('fonts/FuturaLT_Medium/futuralt_medium-webfont.svg#futura_ltbook') format('svg');
+    src: url('fonts/futuralt-heavy/futuralt-heavy-webfont.eot');
+    src: url('fonts/futuralt-heavy/futuralt-heavy-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/futuralt-heavy/futuralt-heavy-webfont.woff2') format('woff2'),
+         url('fonts/futuralt-heavy/futuralt-heavy-webfont.woff') format('woff'),
+         url('fonts/futuralt-heavy/futuralt-heavy-webfont.ttf') format('truetype'),
+         url('fonts/futuralt-heavy/futuralt-heavy-webfont.svg#futuramedium') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'FuturaLT Light';
-    src: url('fonts/FuturaLT_Light/futuralt_light-webfont.eot');
-    src: url('fonts/FuturaLT_Light/futuralt_light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/FuturaLT_Light/futuralt_light-webfont.woff2') format('woff2'),
-         url('fonts/FuturaLT_Light/futuralt_light-webfont.woff') format('woff'),
-         url('fonts/FuturaLT_Light/futuralt_light-webfont.ttf') format('truetype'),
-         url('fonts/FuturaLT_Light/futuralt_light-webfont.svg#futura_ltlight') format('svg');
+    src: url('fonts/futuralt-light/futuralt-light-webfont.eot');
+    src: url('fonts/futuralt-light/futuralt-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/futuralt-light/futuralt-light-webfont.woff2') format('woff2'),
+         url('fonts/futuralt-light/futuralt-light-webfont.woff') format('woff'),
+         url('fonts/futuralt-light/futuralt-light-webfont.ttf') format('truetype'),
+         url('fonts/futuralt-light/futuralt-light-webfont.svg#futura_ltlight') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -153,7 +141,6 @@ section:not(#hero), footer {
 section p {
 	margin-right : 5%;
 	margin-left : 5%;
-	text-align : left;
 }
 
 .inner-section > span {
@@ -181,8 +168,6 @@ a, span {
 	font-family : 'FuturaLT Heavy';
 	text-transform : uppercase;
 }
-
-p { font-family : 'FuturaLT Light'; }
 
 
 
@@ -217,9 +202,10 @@ a, input, textarea {
    
    
 p {
+	font-family : 'FuturaLT Light';
+	text-align : left;
 	margin-right : 5%;
 	margin-left : 5%;
-	text-align : left;
 }
 
 p.indent:before {
@@ -267,7 +253,7 @@ hr {
    =========== */
    
    
-a, input, textarea, .grid-item {
+a, input, textarea {
 	-webkit-transition-timing-function : ease;
    	   -moz-transition-timing-function : ease;
   		 -o-transition-timing-function : ease;
@@ -370,12 +356,6 @@ select {
 			user-select : none;
 }
 
-.hide-backface {
-	-webkit-backface-visibility : hidden;
-	   -moz-backface-visibility : hidden;
-			backface-visibility : hidden;
-}
-
 
 
 
@@ -389,7 +369,6 @@ header {
 	-webkit-box-shadow : 0px 5px 5px rgba(0, 0, 0, 0.125);
        -moz-box-shadow : 0px 5px 5px rgba(0, 0, 0, 0.125);
         	box-shadow : 0px 5px 5px rgba(0, 0, 0, 0.125);
-    background-color : rgba(255, 255, 255, .95) !important;
 }
 		
 		
@@ -397,16 +376,11 @@ header {
 		
 			header .inner-section > div:first-child a {
 				font-size : 33px;
-				text-shadow: 0px 0px 5px rgba(0, 0, 0, .375);
 				-webkit-transition-duration : 1.125s;
    				   -moz-transition-duration : 1.125s;
   					 -o-transition-duration : 1.125s;
     				    transition-duration : 1.125s;
 			}
-			
-			header .inner-section > div:first-child a:hover { text-shadow: 0px 0px 5px rgba(34, 167, 240, .375); }
-			
-			header .inner-section > div:first-child a:active { text-shadow: 0px 0px 5px rgba(155, 155, 155, .375); }
 			
 			
 		header .inner-section > div:nth-child(2) {
@@ -485,12 +459,11 @@ header {
 		}
 
 				footer .inner-section > div:first-child li {
-					padding-right : 3px;
-					padding-left : 3px;
+					padding-right : 5px;
+					padding-left : 5px;
 				}
 
 					footer .google-plus:hover { color : #dd4b39; }
-					footer .facebook:hover { color : #3B5998; }
 					footer .linkedin:hover { color : #007bb6; }
 					footer .github:hover { color : #565656; }
 					
@@ -507,8 +480,8 @@ header {
 				
 				footer .inner-section > div:nth-child(2) ul span {
 					font-size : 12px;
-					margin-right : 7px;
-					margin-left : 7px;
+					margin-right : 6px;
+					margin-left : 6px;
 				}
 
 
@@ -593,59 +566,71 @@ header {
 			padding-top : 10px;
 			padding-bottom : 6px;
 		}
+		
+			.grid > div {
+				border : 1px solid #E9E9E9;
+			}
 
-				.grid-item {
-					position : relative;
-					float : left;
-					width : 100%;
-					padding-bottom : 100%;
-					z-index : 1;
-				}
+					.grid-item {
+						position : relative;
+						float : left;
+						width : 100%;
+						padding-bottom : 100%;
+						z-index : 1;
+						-webkit-transition : .25s ease;
+   	  					   -moz-transition : .25s ease;
+ 				 			 -o-transition : .25s ease;
+								transition : .25s ease;
+							-webkit-backface-visibility : hidden;
+							   -moz-backface-visibility : hidden;
+									backface-visibility : hidden;
+					}
 	
-				.grid-item:hover {
-					z-index : 2;
-					-webkit-box-shadow : 0px 0px 10px 5px rgba(0, 0, 0, .25);
-					   -moz-box-shadow : 0px 0px 10px 5px rgba(0, 0, 0, .25);
-							box-shadow : 0px 0px 10px 5px rgba(0, 0, 0, .25);
-				}
+					.grid-item:hover {
+						z-index : 2;
+						-webkit-box-shadow : 0px 0px 10px 5px rgba(0, 0, 0, .25);
+						   -moz-box-shadow : 0px 0px 10px 5px rgba(0, 0, 0, .25);
+								box-shadow : 0px 0px 10px 5px rgba(0, 0, 0, .25);
+					}
 		
-				.grid-item:active {
-					-webkit-box-shadow : inset 0px 0px 5px 3px rgba(0, 0, 0, .5);
-					   -moz-box-shadow : inset 0px 0px 5px 3px rgba(0, 0, 0, .5);
-							box-shadow : inset 0px 0px 5px 3px rgba(0, 0, 0, .5);
-				}
+					.grid-item:active {
+						-webkit-box-shadow : inset 0px 0px 5px 3px rgba(0, 0, 0, .5);
+						   -moz-box-shadow : inset 0px 0px 5px 3px rgba(0, 0, 0, .5);
+								box-shadow : inset 0px 0px 5px 3px rgba(0, 0, 0, .5);
+					}
 		
-				@media screen and (min-width : 480px) and (max-width : 640px) {
-					.grid-item {
-						width : 50%;
-						padding-bottom : 50%;
+					@media screen and (min-width : 480px) and (max-width : 640px) {
+						.grid-item {
+							width : 50%;
+							padding-bottom : 50%;
+						}
+					} @media screen and (min-width : 640px) and (max-width : 800px) {
+						.grid-item {
+							width : 33.33%;
+							padding-bottom : 33.33%;
+						}
+					} @media screen and (min-width : 801px) {
+						.grid-item {
+							width : 25%;
+							padding-bottom : 25%;
+						}
 					}
-				} @media screen and (min-width : 640px) and (max-width : 800px) {
-					.grid-item {
-						width : 33.33%;
-						padding-bottom : 33.33%;
-					}
-				} @media screen and (min-width : 801px) {
-					.grid-item {
-						width : 25%;
-						padding-bottom : 25%;
-					}
-				}
 
-					.grid-item span {
-						position : absolute;
-						right : 0px;
-						bottom : 0px;
-						left : 0px;
-						padding : 5px;
-						font-size : 16px;
-						background-color : rgba(255, 255, 255, .75);
-						border-top : 1px solid #E9E9E9;
-						cursor : pointer;
-					}
+						.grid-item span {
+							position : absolute;
+							right : 0px;
+							bottom : 0px;
+							left : 0px;
+							padding : 5px;
+							font-size : 16px;
+							background-color : rgba(255, 255, 255, .75);
+							border-top : 1px solid #E9E9E9;
+							cursor : pointer;
+						}
 		
 		
 		
+
 
 /* =====
    piece
@@ -659,8 +644,8 @@ header {
 
 		#last-piece, #all, #next-piece {
 			width : 33.333%;
-			padding-top : 17px;
-			padding-bottom : 16px;
+			padding-top : 18px;
+			padding-bottom : 15px;
 			-webkit-transition : color .375s, box-shadow .125s;
  		  	   -moz-transition : color .375s, box-shadow .125s;
  		 		 -o-transition : color .375s, box-shadow .125s;

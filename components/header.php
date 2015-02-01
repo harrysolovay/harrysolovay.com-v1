@@ -8,7 +8,7 @@
 		),
 		
 		array(
-			'href' => 'work.php',
+			'href' => 'gallery.php?php',
 			'text' => 'work'
 		),
 		

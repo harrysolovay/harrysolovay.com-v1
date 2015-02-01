@@ -22,21 +22,21 @@
 	<meta name='format-detection' content='telephone=no'>
 
 	<!-- descriptors, keywords & slight SEO -->
-	<meta name='title' content='<?php echo $title ?>'>
-	<meta name='description' content='<?php echo $description ?>'>
-	<meta name='keywords' content='<?php echo $keywords ?>'>
+	<meta name='title' content='<?php echo $title; ?>'>
+	<meta name='description' content='<?php echo $description; ?>'>
+	<meta name='keywords' content='<?php echo $keywords; ?>'>
 	<meta name='robots' content='index, follow'>
-	<meta name='revisit-after' content='15 days'>
+	<meta name='revisit-after' content='2 days'>
 
 	<!-- people -->
-	<meta name='designer' content='<?php echo $creator ?>'>
-	<meta name='copyright' content='<?php echo $copyright ?>'>
+	<meta name='designer' content='<?php echo $creator; ?>'>
+	<meta name='copyright' content='<?php echo $copyright; ?>'>
 
 	<!-- open graph protocol -->
-	<meta property='og:title' content='<?php echo $title ?>'>
-	<meta property='og:description' content='<?php echo $description ?>'>
+	<meta property='og:title' content='<?php echo $title; ?>'>
+	<meta property='og:description' content='<?php echo $description; ?>'>
 	<meta property='og:image' content='http://harrysolovay.com/images/logo.jpg'><!-- Check if can be replaced with local url -->
-	<meta property='og:url' content='<?php echo $current_page_url ?>'>
+	<meta property='og:url' content='<?php echo $current_page_url; ?>'>
 	<meta property='og:type' content='website'>
 
 	<!-- iOS shortcut -->
@@ -53,14 +53,10 @@
 
 	<!-- iOS shortcut image -->
 	<?php
-		$directory = scandir('images/icon/sizes/');
-		foreach($directory as $file) {
-			if(($file != '..') &&
-				($file != '.') &&
-				($file != '.DS_Store')) {
-				$size = getimagesize('images/icon/sizes/' . $file)[0];
-				echo "<link rel='apple-touch-icon-precomposed' href='images/icon/sizes/{$file}' sizes='{$size}x{$size}'>";
-   			}
+		$icons = glob('images/icon/sizes/*.png');
+		foreach($icons as $icon) {
+			$size = getimagesize($icon)[0];
+			echo "<link rel='apple-touch-icon-precomposed' href='$icon' sizes='{$size}x{$size}'>";
 		}
 	?>
 
